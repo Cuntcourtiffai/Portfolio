@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Epeke Vuyisani | Web Developer</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #000, #1a1a1a);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .highlight {
+      color: #00ffcc;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .projects {
+      display: grid;
+      gap: 30px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 15px;
+      transform: scale(0.95);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card:hover {
+      transform: scale(1);
+      box-shadow: 0 10px 30px rgba(0,255,204,0.2);
+    }
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      background: #00ffcc;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,255,204,0.4);
+    }
+
+    .pricing {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #00ffcc;
+    }
+
+    .socials {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: #00ffcc;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .socials a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #00ffcc;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s ease;
+    }
+
+    .socials a:hover::after {
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Epeke <span class="highlight">Vuyisani</span></h1>
+  <p>Web Developer • Nigeria • Age 22</p>
+  <p>I design modern, responsive websites for businesses, brands, and creatives.</p>
+
+  <a href="https://wa.me/2349044354460" class="btn">Hire Me on WhatsApp</a>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p>
+    I’m <strong>Epeke Vuyisani</strong>, a Nigeria-based web developer helping businesses, creators, and brands build clean, modern websites that convert visitors into paying clients.
+  </p>
+
+  <p>
+    I work with <strong>clients worldwide</strong>, delivering high-quality, responsive websites at a fraction of typical international costs — without compromising on design, speed, or user experience.
+  </p>
+
+  <p>
+    My approach is simple: create websites that look premium, load fast, and guide users to take action. Whether you need a portfolio, landing page, or business website, I focus on results — not just visuals.
+  </p>
+
+  <p>
+    What you get working with me:
+    <br>• Clean, modern design that matches global standards
+    <br>• Mobile-first, fully responsive websites
+    <br>• Fast delivery and clear communication
+    <br>• Affordable pricing with real value
+  </p>
+
+  <p>
+    If you're looking for a reliable developer who can deliver <strong>professional results on a budget</strong>, I’m ready to work with you — wherever you are in the world.
+  </p>
+</section>
+
+<section>
+  <h2>My Work</h2>
+  <div class="projects">
+
+    <div class="card">
+      <video controls src="https://res.cloudinary.com/dhyzolr5m/video/upload/v1776774624/video1_gsa4fz.mp4"></video>
+      <p>Modern Business Website</p>
+    </div>
+
+    <div class="card">
+      <video controls src="https://res.cloudinary.com/dhyzolr5m/video/upload/v1776774662/video2_ljac7m.mp4"></video>
+      <p>Model Portfolio</p>
+    </div>
+
+    <div class="card">
+      <video controls src="https://res.cloudinary.com/dhyzolr5m/video/upload/v1776774632/video3.mp4_nng9dl.mp4"></video>
+      <p>Blog Website</p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Pricing</h2>
+  <p class="pricing">$10 – $20 per website</p>
+  <p style="text-align:center;">(₦15,000 – ₦30,000)</p>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <div style="text-align:center;">
+    <a href="mailto:Vuyisaniepeke@gmail.com" class="btn">Email Me</a>
+    <a href="https://wa.me/2349044354460" class="btn">WhatsApp</a>
+  </div>
+
+  <div class="socials">
+    <a href="https://www.tiktok.com/@if_fai?_r=1&_t=ZS-95irEXbNbT3" target="_blank">TikTok</a>
+    <a href="https://www.instagram.com/cvntcourtiffai" target="_blank">Instagram</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Epeke Vuyisani</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
