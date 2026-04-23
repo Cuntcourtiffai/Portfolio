@@ -17,6 +17,65 @@
       line-height: 1.6;
     }
 
+    header {
+      text-align: center;
+      padding: 120px 20px 100px;
+      background: linear-gradient(135deg, #000, #1a1a1a);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    nav a:hover { opacity: 1; }
+
+    h1 { font-size: 2.8rem; margin-bottom: 15px; }
+    h2 { font-size: 2rem; margin-bottom: 20px; }
+    h3 { margin: 30px 0 10px; }
+
+    p { color: #bfbfbf; margin-bottom: 20px; }
+
+    .highlight { color: #00ffcc; }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255,255,255,0.2);
+    }
+
+    .btn-outline {
+      border: 1px solid #fff;
+      color: #fff;
+      background: transparent;
+    }
+
     section {
       padding: 80px 20px;
       max-width: 1000px;
@@ -31,36 +90,6 @@
       transform: translateY(0);
     }
 
-    h1 { font-size: 2.7rem; margin-bottom: 15px; }
-    h2 { font-size: 2rem; margin-bottom: 20px; }
-
-    p { color: #bfbfbf; margin-bottom: 20px; }
-
-    header {
-      text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(135deg, #000, #1a1a1a);
-    }
-
-    .highlight { color: #00ffcc; }
-
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      background: #fff;
-      color: #000;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 500;
-    }
-
-    .btn-outline {
-      border: 1px solid #fff;
-      color: #fff;
-      background: transparent;
-    }
-
     .grid {
       display: grid;
       gap: 20px;
@@ -69,14 +98,22 @@
     .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
     .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 
-    .card img {
-      width: 100%;
-      border-radius: 12px;
-      transition: transform 0.3s ease;
+    .card {
+      background: #111;
+      padding: 10px;
+      border-radius: 14px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .card:hover img {
-      transform: scale(1.03);
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
     }
 
     .divider {
@@ -97,9 +134,17 @@
 
 <body>
 
+<nav>
+  <div><strong>Vuyisani</strong></div>
+  <div>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
 <header>
   <h1>Epeke <span class="highlight">Vuyisani</span></h1>
-  <p>I design modern websites that attract clients and elevate brands.</p>
+  <p>I design clean, modern websites for businesses, models, and creators — built to attract clients and drive results.</p>
 
   <a href="#work" class="btn">View My Work</a>
   <a href="#contact" class="btn btn-outline">Get a Quote</a>
@@ -108,8 +153,8 @@
 <section>
   <h2>About Me</h2>
   <p>
-    I’m a web designer focused on creating clean, modern websites for businesses, models, and content creators.
-    My goal is simple — design websites that look premium and convert visitors into clients.
+    I create modern, conversion-focused websites that help brands stand out and turn visitors into clients.
+    My focus is on clean design, strong layout, and real results.
   </p>
 </section>
 
@@ -118,8 +163,8 @@
 <section id="work">
   <h2>Selected Work</h2>
 
-  <!-- PERFUME -->
   <h3>Perfume Brand Website</h3>
+  <p>A luxury-focused design showcasing products clearly while maintaining a premium brand feel.</p>
   <div class="grid grid-3">
     <div class="card"><img src="https://res.cloudinary.com/dhyzolr5m/image/upload/v1776959821/Screenshot_20260423_112104_mfw7ad.jpg"></div>
     <div class="card"><img src="https://res.cloudinary.com/dhyzolr5m/image/upload/v1776959820/Screenshot_20260422_131313_com.gbox.android_edit_192135968038906_rdvxwz.jpg"></div>
@@ -136,8 +181,8 @@
     <div class="card"><img src="https://res.cloudinary.com/dhyzolr5m/image/upload/v1776959821/Screenshot_20260422_131423_com.gbox.android_edit_192445783358130_iehp3l.jpg"></div>
   </div>
 
-  <!-- MODEL -->
   <h3 style="margin-top:60px;">Model Portfolio</h3>
+  <p>A visually-driven layout designed to highlight the model’s work and brand collaborations.</p>
   <div class="grid grid-2">
     <div class="card"><img src="https://res.cloudinary.com/dhyzolr5m/image/upload/v1776959822/Screenshot_20260423_140516_com.gbox.android_edit_204298240917780_t8kpix.jpg"></div>
     <div class="card"><img src="https://res.cloudinary.com/dhyzolr5m/image/upload/v1776959822/Screenshot_20260423_140516_com.gbox.android_edit_204351201000584_hbh7z6.jpg"></div>
@@ -155,10 +200,10 @@
     <div class="card"><img src="https://res.cloudinary.com/dhyzolr5m/image/upload/v1776959824/Screenshot_20260423_140618_com.gbox.android_edit_205773518745680_sm83nx.jpg"></div>
   </div>
 
-  <!-- BLOG -->
   <h3 style="margin-top:60px;">Blog Website</h3>
+  <p>A structured blog layout focused on readability and content organization.</p>
   <div class="grid grid-2">
-    <div class="card"><img src="images/https://res.cloudinary.com/dhyzolr5m/image/upload/v1776959824/Screenshot_20260423_141354_com.gbox.android_edit_205799244214426_perr0t.jpg"></div>
+    <div class="card"><img src="https://res.cloudinary.com/dhyzolr5m/image/upload/v1776959824/Screenshot_20260423_141354_com.gbox.android_edit_205799244214426_perr0t.jpg"></div>
   </div>
 
   <div class="grid grid-2" style="margin-top:20px;">
@@ -182,7 +227,7 @@
 
 <section>
   <h2>Pricing</h2>
-  <p>Projects start from $22. Final pricing depends on scope and requirements.</p>
+  <p>Projects start from $150. Final pricing depends on scope and requirements.</p>
 </section>
 
 <section id="contact">
@@ -205,202 +250,6 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.2 });
 sections.forEach(section => observer.observe(section));
-</script>
-
-</body>
-</html>
-      transform: translateY(40px);
-      transition: all 0.8s ease;
-    }
-
-    section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .projects {
-      display: grid;
-      gap: 30px;
-    }
-
-    .card {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 15px;
-      transform: scale(0.95);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    .card:hover {
-      transform: scale(1);
-      box-shadow: 0 10px 30px rgba(0,255,204,0.2);
-    }
-
-    video {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      background: #00ffcc;
-      color: black;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,255,204,0.4);
-    }
-
-    .pricing {
-      text-align: center;
-      font-size: 1.5rem;
-      color: #00ffcc;
-    }
-
-    .socials {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .socials a {
-      margin: 0 10px;
-      color: #00ffcc;
-      text-decoration: none;
-      position: relative;
-    }
-
-    .socials a::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      background: #00ffcc;
-      left: 0;
-      bottom: -4px;
-      transition: width 0.3s ease;
-    }
-
-    .socials a:hover::after {
-      width: 100%;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #000;
-      font-size: 0.9rem;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <h1>Epeke <span class="highlight">Vuyisani</span></h1>
-  <p>Web Developer • Nigeria • Age 22</p>
-  <p>I design modern, responsive websites for businesses, brands, and creatives.</p>
-
-  <a href="https://wa.me/2349044354460" class="btn">Hire Me on WhatsApp</a>
-</header>
-
-<section>
-  <h2>About Me</h2>
-  <p>
-    I’m <strong>Epeke Vuyisani</strong>, a Nigeria-based web developer helping businesses, creators, and brands build clean, modern websites that convert visitors into paying clients.
-  </p>
-
-  <p>
-    I work with <strong>clients worldwide</strong>, delivering high-quality, responsive websites at a fraction of typical international costs — without compromising on design, speed, or user experience.
-  </p>
-
-  <p>
-    My approach is simple: create websites that look premium, load fast, and guide users to take action. Whether you need a portfolio, landing page, or business website, I focus on results — not just visuals.
-  </p>
-
-  <p>
-    What you get working with me:
-    <br>• Clean, modern design that matches global standards
-    <br>• Mobile-first, fully responsive websites
-    <br>• Fast delivery and clear communication
-    <br>• Affordable pricing with real value
-  </p>
-
-  <p>
-    If you're looking for a reliable developer who can deliver <strong>professional results on a budget</strong>, I’m ready to work with you — wherever you are in the world.
-  </p>
-</section>
-
-<section>
-  <h2>My Work</h2>
-  <div class="projects">
-
-    <div class="card">
-      <video controls src="https://res.cloudinary.com/dhyzolr5m/video/upload/v1776774624/video1_gsa4fz.mp4"></video>
-      <p>Modern Business Website</p>
-    </div>
-
-    <div class="card">
-      <video controls src="https://res.cloudinary.com/dhyzolr5m/video/upload/v1776774662/video2_ljac7m.mp4"></video>
-      <p>Model Portfolio</p>
-    </div>
-
-    <div class="card">
-      <video controls src="https://res.cloudinary.com/dhyzolr5m/video/upload/v1776774632/video3.mp4_nng9dl.mp4"></video>
-      <p>Blog Website</p>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <h2>Pricing</h2>
-  <p class="pricing">$10 – $20 per website</p>
-  <p style="text-align:center;">(₦15,000 – ₦30,000)</p>
-</section>
-
-<section>
-  <h2>Contact</h2>
-  <div style="text-align:center;">
-    <a href="mailto:Vuyisaniepeke@gmail.com" class="btn">Email Me</a>
-    <a href="https://wa.me/2349044354460" class="btn">WhatsApp</a>
-  </div>
-
-  <div class="socials">
-    <a href="https://www.tiktok.com/@if_fai?_r=1&_t=ZS-95irEXbNbT3" target="_blank">TikTok</a>
-    <a href="https://www.instagram.com/cvntcourtiffai" target="_blank">Instagram</a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Epeke Vuyisani</p>
-</footer>
-
-<script>
-  const sections = document.querySelectorAll("section");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  }, { threshold: 0.2 });
-
-  sections.forEach(section => {
-    observer.observe(section);
-  });
 </script>
 
 </body>
